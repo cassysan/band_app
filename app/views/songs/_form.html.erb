@@ -1,0 +1,13 @@
+<%= simple_form_for(song, local: true) do |f| %>
+
+  <%= f.label :name %>
+  <br>
+  <%= f.text_field :name %>
+  <%= f.label :lyrics %>
+  <%= f.text_field :lyrics %>
+  <%= f.label :rating %>
+  <%= f.input :rating %>
+  <%= hidden_field_tag "song[album_id]", "#{@album.id}" %>
+  <%= f.submit %>
+<% end %>
+

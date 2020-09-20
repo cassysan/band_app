@@ -1,0 +1,19 @@
+<h1>
+  <%= @band.name %>
+</h1>
+<p>
+  <%= link_to "Edit", edit_band_path(@band) %>
+  <%= link_to "Delete", band_path(@band), method: :delete %>
+</p>
+
+<ul>
+<% if @band.albums.any? %>
+<hr>
+  <%= render @band.albums %>
+<% end %>
+</ul>
+<hr>
+<h2>Add an album:</h2>
+<%= render 'albums/form', album: @album %>
+<%= link_to "back to bands", bands_path %>
+

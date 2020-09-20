@@ -1,0 +1,14 @@
+
+
+<ul>
+  <li>
+    <h3>
+      <%= song.name%>
+    </h3>
+    <p><%= song.rating %> </p>
+    <%= link_to "Delete Song", song_path(song), method: :delete %>
+  </li>
+</ul>
+
+<%= link_to "Back to Album", band_path(song.album.band) %>
+<%= link_to "Back to All Bands", bands_path %>

@@ -1,0 +1,8 @@
+    <h3>
+      <%= link_to album.name, band_album_path(@band, album) %>
+    </h3>
+      <p>Edit this album:</p>
+      <%= render 'albums/form', album: album %>
+      <%= link_to "(Delete)",
+      band_album_path(album.band, album) , method: :delete %>
+

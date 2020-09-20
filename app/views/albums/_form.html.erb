@@ -1,0 +1,7 @@
+<%= simple_form_for([ @band, album ], local: true) do |f| %>
+
+  <%= f.label :name %>
+  <br>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,13 @@
+<h1>
+  <%= @album.name %>
+</h1>
+<h1>By: <%= @album.band.name %></h1>
+<hr>
+<h3>Songs on this album:</h3>
+<% if @album.songs.any? %>
+  <%= render @album.songs %>
+<% end %>
+<hr>
+<p>Add a new song:</p>
+<%= render "./songs/form", song: @song, album: @album %>
+
